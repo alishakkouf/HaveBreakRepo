@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "c3d0c3ae-507c-4470-8e00-176407d8e439",
+		"name": "HaveBreakTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12399958"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Mobile-Api-Key",
+						"value": "HaveBreak_Mobile_Ali",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"ali\",\r\n  \"lastName\": \"shakkouf\",\r\n  \"phoneNumber\": \"+963935479586\",\r\n  \"password\": \"P@ssw0rd\",\r\n  \"email\": \"alishakkouf404@gmail.com\",\r\n  \"gender\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7058/api/Account/Register",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7058",
+					"path": [
+						"api",
+						"Account",
+						"Register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Mobile-Api-Key",
+						"value": "HaveBreak_Mobile_Ali",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userName\": \"alishakkouf404@gmail.com\",\r\n  \"password\": \"P@ssw0rd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7058/api/Account/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7058",
+					"path": [
+						"api",
+						"Account",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjQiLCJzdWIiOiJhbGlzaGFra291ZjQwNEBnbWFpbC5jb20iLCJJc0FjdGl2ZSI6IlRydWUiLCJqdGkiOiI5NTUxZTdiMy0xZTJjLTRiMTQtODFhOC03NTBiMmRlNWVjYzciLCJyb2xlIjoiVXNlciIsImV4cCI6MTczMzEzNjcwMCwiaXNzIjoiQWxpIiwiYXVkIjoiQWxpIn0.krjllFUacjHWAq_cd8hzuG0VGUhFTY20KmWUKjJrg-k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Mobile-Api-Key",
+						"value": "HaveBreak_Mobile_Ali",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"content\": \"test creating new post\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7058/api/Posts",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7058",
+					"path": [
+						"api",
+						"Posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "like post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjQiLCJzdWIiOiJhbGlzaGFra291ZjQwNEBnbWFpbC5jb20iLCJJc0FjdGl2ZSI6IlRydWUiLCJqdGkiOiI5NTUxZTdiMy0xZTJjLTRiMTQtODFhOC03NTBiMmRlNWVjYzciLCJyb2xlIjoiVXNlciIsImV4cCI6MTczMzEzNjcwMCwiaXNzIjoiQWxpIiwiYXVkIjoiQWxpIn0.krjllFUacjHWAq_cd8hzuG0VGUhFTY20KmWUKjJrg-k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Mobile-Api-Key",
+						"value": "HaveBreak_Mobile_Ali",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:7058/api/Posts/5/like",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7058",
+					"path": [
+						"api",
+						"Posts",
+						"5",
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Feed on posts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjQiLCJzdWIiOiJhbGlzaGFra291ZjQwNEBnbWFpbC5jb20iLCJJc0FjdGl2ZSI6IlRydWUiLCJqdGkiOiI5NTUxZTdiMy0xZTJjLTRiMTQtODFhOC03NTBiMmRlNWVjYzciLCJyb2xlIjoiVXNlciIsImV4cCI6MTczMzEzNjcwMCwiaXNzIjoiQWxpIiwiYXVkIjoiQWxpIn0.krjllFUacjHWAq_cd8hzuG0VGUhFTY20KmWUKjJrg-k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Mobile-Api-Key",
+						"value": "HaveBreak_Mobile_Ali",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:7058/api/Posts/Feed",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7058",
+					"path": [
+						"api",
+						"Posts",
+						"Feed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjQiLCJzdWIiOiJhbGlzaGFra291ZjQwNEBnbWFpbC5jb20iLCJJc0FjdGl2ZSI6IlRydWUiLCJqdGkiOiI5NTUxZTdiMy0xZTJjLTRiMTQtODFhOC03NTBiMmRlNWVjYzciLCJyb2xlIjoiVXNlciIsImV4cCI6MTczMzEzNjcwMCwiaXNzIjoiQWxpIiwiYXVkIjoiQWxpIn0.krjllFUacjHWAq_cd8hzuG0VGUhFTY20KmWUKjJrg-k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Mobile-Api-Key",
+						"value": "HaveBreak_Mobile_Ali",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:7058/api/Posts/5/Details",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7058",
+					"path": [
+						"api",
+						"Posts",
+						"5",
+						"Details"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

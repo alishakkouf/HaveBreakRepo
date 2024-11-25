@@ -1,0 +1,6 @@
+@HaveBreak.API_HostAddress = http://localhost:5230
+
+GET {{HaveBreak.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
